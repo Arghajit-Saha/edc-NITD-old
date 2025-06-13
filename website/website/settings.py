@@ -164,3 +164,7 @@ EMAIL_HOST_USER = os.getenv('EMAIL',"email")
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD',"password")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://edc-nitd-old.onrender.com",
+]
