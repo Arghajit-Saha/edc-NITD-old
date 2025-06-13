@@ -1,0 +1,738 @@
+{% extends 'forum/base.html' %}
+{% load static %}
+{% block content %}
+<!-- ======= Intro Section ======= -->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
+ 
+ <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <section id="intro">
+
+    <div class="intro-container">
+
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+
+
+        <ol class="carousel-indicators"></ol>
+
+
+
+        <div class="carousel-inner" role="listbox">
+
+
+
+          <div class="carousel-item active" style="background-image: url('{% static 'img/images/speakersFINAL.png' %}')">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Entrepreneurship Development Cell</h2>
+
+                <p class="animate__animated animate__fadeInUp">Ideate. Innovate. Incubate
+
+                 </p>
+
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">About Us</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="carousel-item" style="background-image: url('{% static 'img/hmc2.jpeg' %}')">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Entrepreneurship Summit 24</h2>
+
+                <p class="animate__animated animate__fadeInUp">The second biggest E-Summit in eastern India</p>
+
+                <p class="animate__animated animate__fadeInUp">E-Summit 2024 has ended</p>
+
+                <a href="https://esummit.edcnitd.co.in" class="btn-get-started scrollto animate__animated animate__fadeInDown">Visit E-Summit 2024</a>
+
+                <a href="{% url 'esummit_page' latest %}" class="btn-get-started scrollto animate__animated animate__fadeInDown">Take a peek</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!--
+          <div class="carousel-item" style="background-image: url()">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Innovation Cell</h2>
+
+                <p class="animate__animated animate__fadeInUp">Make your dreams come true.</p>
+
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Check It Out</a></a>
+
+              </div>
+
+            </div>
+
+          </div>
+           -->
+
+
+
+          <div class="carousel-item" style="background-image: url('{% static 'img/images/d2grpfinal.jpeg' %}')">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Our Team</h2>
+
+                <p class="animate__animated animate__fadeInUp">People who make it all happen.</p>
+
+                <a href="{% url 'team_page'%}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Meet Us</a>
+
+              </div>
+
+            </div>
+
+          </div>
+          
+
+          <div class="carousel-item" style="background-image: url('{% static 'img/images/luminousgrp.heic' %}')">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Want to Join Us?</h2>
+
+                <p class="animate__animated animate__fadeInUp">Join the people who make it happen.</p>
+
+                <a href="https://audition.edcnitd.co.in" class="btn-get-started scrollto animate__animated animate__fadeInUp">Join Us</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--
+          <div class="carousel-item" style="background-image: url()">
+
+            <div class="carousel-container">
+
+              <div class="container">
+
+                <h2 class="animate__animated animate__fadeInDown">Our Alumni</h2>
+
+                <p class="animate__animated animate__fadeInUp">The ones who have made a mark.</p>
+
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Know more</a>
+
+              </div>
+
+            </div>
+
+          </div>
+          -->
+
+
+
+        </div>
+
+
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+
+          <span class="sr-only">Previous</span>
+
+        </a>
+
+
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+
+          <span class="sr-only">Next</span>
+
+        </a>
+
+
+
+      </div>
+
+    </div>
+
+  </section><!-- End Intro Section -->
+  
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+    
+    
+    
+    a.morelink {
+        text-decoration:none;
+        outline: none;
+    }
+    .morecontent span {
+        display: none;
+    
+    }
+
+    
+    
+</style>
+
+
+
+
+
+
+  <main id="main">
+
+
+
+    <!-- ======= About Us Section ======= -->
+
+    <section id="about">
+
+      <div class="container" data-aos="fade-up">
+
+
+
+        <header class="section-header">
+
+          <h3>About Us</h3>
+
+          <p>The Entrepreneurship Development Cell, NIT Durgapur is the institution’s official Entrepreneurship Promoting student body. Through a plethora of initiatives throughout the year, we remain steadfast to our sole dream of creating a sustainable and diverse entrepreneurial ecosystem where the young and the elderly come together to make entrepreneurship a common reality in India.</p>
+
+        </header>
+
+
+
+        <div class="row about-cols">
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="about-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+
+              </div>
+
+              <h2 class="title">Innovation and Incubation Council</h2>
+
+              <p class="pop">
+		Innovation and Incubation Council, NIT Durgapur is NIT Durgapur’s very own incubation body, established under the Ministry of Education, Govt. of India. EDC, NIT  Durgapur is an integral part of IIIC, NIT Durgapur and works together with the faculty members of IIIC to carry out various entrepreneurial activities and projects in the campus </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="about-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+
+              </div>
+
+              <h2 class="title">Our Events</h2>
+
+              <p class="pop">
+               	EDC’s numerous events enjoys overwhelming participation from students in NIT Durgapur, and across the country. Some of our flagship events are:
+		          <br><strong>E-SUMMIT:</strong>The second largest E-Summit in eastern India, graced by the biggest entrepreneurs and celebrity speakers.
+		          <br><strong>BizzCup:</strong> A fun event designed exclusively for the freshmen students.
+		          <br><strong>Pitchfest:</strong> A nationwide B-Plan Competition, with huge funding and mentorship opportunities for winning proposals.
+		          <br><strong>Hult Prize:</strong> On Campus Round of the renowned international competition, Hult Prize organised every year by EDC NIT Durgapur
+		              and the list goes on.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="about-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+
+              </div>
+
+              <h2 class="title">Our Journey</h2>
+
+              <p class="pop">
+                In 2015, inspired by a desire to instil an entrepreneurial culture in NIT Durgapur, a group of three friends decided to start the first independent  Entrepreneurship Cell of the College. What began as a small endeavour by three young minds has today risen to stand tall with over 70 members, achieving unimaginable things in just a span of few years. This journey would have never been possible without EDC’s incredible alumni who have worked ever so tirelessly to take the clubs to the height it has scaled. Today, EDC proudly figures among the most prolific entrepreneurship cells of the country, and we only hope to get bigger and better in the years to come!
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+      
+
+    </section>
+    <!-- End About Us Section -->
+    <!-- ======= Services Section ======= -->
+
+    <section id="services">
+
+      <div class="container" data-aos="fade-up">
+
+
+
+        <header class="section-header">
+
+          <h3>What we Do?</h3>
+
+          <p>From Idea to Impact: Our Services Fueling Tomorrow's Businesses</p>
+
+        </header>
+
+
+        <div class="services-wrapper">
+        <div class="row services-cols">
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-light-bulb"></i></div>
+
+              </div>
+
+              <h2 class="title"><a href="https://esummit.edcnitd.co.in/" target="_blank">E-SUMMIT</a></h2>
+
+              <p class="pop">
+                E-Summit, Eastern India's second-largest entrepreneurship fest, fosters student innovation and skills through competitions and discussions over three days. It offers students a chance to learn from seasoned entrepreneurs about the challenges of entrepreneurship. </p>
+                {% comment %} <li><a href="https://esummit.edcnitd.co.in/" target="_blank">E-Summit'24</a></li> {% endcomment %}
+              </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-microphone"></i></div>
+                
+              </div>
+
+              <h2 class="title">E-TALKS</h2>
+
+              <p class="pop">
+                E-Talks, the highlight of E-Summit, features influential speakers and successful entrepreneurs sharing their stories and advice. Notable past speakers include Prafull Billore (MBA Chaiwala), Iqlipse Nova (BigBrainCo), Ishan Sharma (MarkitUp), and Kiran Bedi. These interactions provide students with valuable insights into the entrepreneurial world.</p>
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-space-shuttle"></i></div>
+
+              </div>
+
+              <h2 class="title">STARTUP-EXPO</h2>
+
+              <p class="pop">
+                Team EDC conducts StartupExpo, an event where real-life startups visit our campus and pitch their innovative ideas to seasoned investors and VC’s. This event is a vital opportunity for startups to raise funding and for students to interact and learn from business professionals. </p>
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon flex justify-center items-center"><i class="icofont-presentation"></i></div>
+
+              </div>
+
+              <h2 class="title">PITCHFEST</h2>
+
+              <p class="pop">
+                Pitchfest, the flagship event of E-Summit by Team EDC, connects aspiring entrepreneurs with experienced professionals. Participants pitch their ideas, receive feedback, and potentially secure funding, similar to the Shark Tank experience.</p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-search-job"></i></div>
+
+              </div>
+
+              <h2 class="title">INTERNSHIP FAIR</h2>
+
+              <p class="pop">
+                The Internship Fair at E-Summit, organized by Team EDC, invites companies to offer students internships in fields like sales, video editing, graphic design, web development, and content writing, providing hands-on industry experience. </p>
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-files-stack"></i></div>
+
+              </div>
+
+              <h2 class="title"><a href="https://hult.edcnitd.co.in/" target="_blank">HULT PRIZE</a></h2>
+
+              <p class="pop">
+                The Hult Prize is the world's largest student social entrepreneurship competition, run in partnership with the United Nations. Team EDC conducts the OnCampus round of the Hult prize, where students come up with revolutionary start up ideas to solve a pressing social issue. The winners of this round earn an invite to the Global Summits, and potentially a chance to win $1 million. </p>
+                {% comment %} <li><a href="https://hult.edcnitd.co.in/" target="_blank">Hult Prize</a></li> {% endcomment %}
+              </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="10">
+
+            <div class="services-col">
+
+              <div class="img">
+
+                <img src="" alt="" class="img-fluid">
+
+                <div class="icon"><i class="icofont-trophy-alt"></i></div>
+
+              </div>
+
+              <h2 class="title">BIZZCUP</h2>
+
+              <p class="pop">
+                Bizcup consists of three strategic rounds dealing with aspects like corporate quizzes, marketing and problem solving. It provides a great opportunity for participants to hone their decision making, creativity and  communication skills, all of which are necessary to thrive as an entrepreneur. </p>
+            </div>
+
+          </div>
+
+
+        </div>
+
+</div>
+
+ </div>
+      
+    </section>
+    <!-- End Services Section -->
+   
+    <!-- ======= Events Section ======= -->
+    
+    <!-- End Events Section -->
+    <section id="photos">
+
+	<div class="container">
+
+    
+    
+<br>
+<br>
+
+
+     <header class="section-header">
+
+        <h3>A Photogenic Journey</h3>
+
+      </header>
+     
+      <!-- Swiper -->
+      <div class="swiper-container" id="photogenic-journey" data-aos="fade-up" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/IMG_5575.JPG' %}'); height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width: 100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">ROR: One of our many fun events</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/luminous23.heic' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width:  100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">Luminous: EDC's celebration of Diwali</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/bizcup2.jpeg' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width:  100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">BizzCup: Our signature fresher's event</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/cr4.jpeg' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width:  100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">The crowd at E-SUMMIT</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/grppb.heic' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width: 100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">Team EDC</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/ABesummit.jpeg' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width:  100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">Aditya Bharadwaj at E-SUMMIT'24</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="background-image:url('{% static 'img/images/IMG_6184.JPG' %}');
+          height:300px; width:350px;background-position: center;
+          background-size: cover;">
+            <div class="container" style="max-width: 300px; height: 250px;"></div>
+            <div class="panel panel-default" style="background-color: rgba(0,0,0,0.7); width:  100%; height: 50px; text-align: center;">
+              <div class="panel-body" style="padding-top: 10px; color: var(--theme-color);">Iqlipse Nova at E-SUMMIT'23</div>
+            </div>
+          </div>
+          
+          </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    
+     
+
+    </div>
+  </section>
+<!-- ======= Speakers Section ======= -->
+
+<section id="testimonials" class="section-bg">
+
+  <div class="container" data-aos="fade-up">
+
+
+
+    <header class="section-header">
+
+      <h3>Our Startups</h3>
+
+    </header>
+
+    <div id="bar"></div>
+
+    <div class="owl-carousel startups-carousel">
+
+
+
+      <div class="testimonial-item">
+
+         <img src="{% static 'img/kenakata.jpeg' %}" class="testimonial-img" alt="">
+
+        <h3>KENAKATA</h3>
+
+        <h4>Swarnendu Mondal, Shubham Keshri, Oindrilla Ghosh Dastidar</h4>
+
+        <p>
+
+          <img src="{% static 'img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
+
+          Kenakata was an "OLA of NITD" where a buyer used to post his needs in the Facebook page of Kenakata and the person who had that item used to comment on that post. Items like Yoga mats, books were exchanged through this platform. The future aspect of 'Kenakata' is known as 'Shikshamani' where people can post their questions and the person providing answers will get some perks form the local market. The founders can generate revenue from advertisement. 
+          <img src="{% static 'img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
+
+        </p>
+
+      </div>
+
+
+
+
+     <div class="testimonial-item">
+
+       <img src="{% static 'img/calcuttadelights.jpeg'%}" class="testimonial-img" alt="">
+
+        <h3>CALCUTTA DELIGHTS</h3>
+
+        <h4>Jeet Karmakar, Dyutiman Bhattacharjee, Snigdha Majhee</h4>
+
+        <p>
+
+          <img src="{% static 'img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
+
+          Inspired from Wow Momos Jeet Karmakar an alumnus of NITD came up with a startup plan to cater to the sweet tooth of NIT Dgpians in 2016.They had collaborated with 'Tatkal' a delivery based startup at  NITD for reaching out to the students. They even started online delivery services in South Kolkata. They developed from a small startup delivering sweets within the campus of NIT Durgapur to spreading its wings across the state where they were delivering authentic Bengali sweets right at one's doorstep.
+
+          <img src="{% static 'img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
+
+        </p>
+
+      </div>
+
+
+
+      <div class="testimonial-item">
+
+         <img src="{% static 'img/printex.jpeg' %}" class="testimonial-img" alt="">
+
+        <h3>PRINTEX</h3>
+
+        <h4>Shashwat Srivastava, Manish Awasthi, Adarsh Shaw, Jayant Mishra, Avijeet Tiwari, Akash Pandey</h4>
+
+        <p>
+
+          <img src="{% static 'img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
+
+          Looking at the difficulties faced by the students of NITD to avail print out of documents, the founders of Printex came up with this start up plan in the year 2017. Printex came up with a vision to provide 24x7 printing facilities within the hostel premises itself. They provided printouts and photocopies at reasonable costs within the premises of the hostel round the day.
+
+          <img src="{% static 'img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
+
+        </p>
+
+      </div>
+
+
+
+      <div class="testimonial-item">
+
+       	<img src="{% static 'img/justhashtag.jpeg' %}" class="testimonial-img" alt="">
+        <h3>JUST HASHTAGS</h3>
+
+        <h4>Pranoy Ray, Swarupjit Palit.</h4>
+
+        <p>
+
+          <img src="{% static 'img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
+
+          Just Hashtags is a social platform for designing and manufacturing of customised T-shirts. Founded in April 2016, Just Hashtags usually takes bulk orders from schools, college and corporate houses and makes T-shirts specific to their requirements at extremely reasonable prices. 
+          <img src="{% static 'img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
+
+        </p>
+
+      </div>
+
+
+
+      <div class="testimonial-item">
+
+        <img src="{% static 'img/pgo.jpeg' %}" class="testimonial-img" alt="">
+
+        <h3>PEDALS GO</h3>
+
+        <h4>Kaushik, Gaurav, Shane</h4>
+
+        <p>
+
+          <img src="{% static 'img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
+
+          PedalsGo is mainly working on cycle rental where booking is done via call. This is basically a campus connect programme where the cycle rental facilities are provided to the campus residents. It is a platform which is integrating many cycles under one umbrella. In future, PedalsGo will work automatically, where booking will be done through an app. Not only cycles but also electric scooters will be provided in future. The vehicles will be tracked through their entire journey.
+          <img src="{% static 'img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
+
+        </p>
+
+      </div>
+
+
+
+    </div>
+    
+    <!-- ======= End Speakers Section ======= -->
+  
+   
+
+
+    </div>
+    </section>
+
+  
+</main>
+{% endblock %}
